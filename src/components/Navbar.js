@@ -22,12 +22,12 @@ export default function Navbar(props) {
                             </li> */}
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown link
+                                    {props.dropdown_head}
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="/">Action</a></li>
-                                    <li><a className="dropdown-item" href="/">Another action</a></li>
-                                    <li><a className="dropdown-item" href="/">Something else here</a></li>
+                                    <li><a className="dropdown-item" href="/">{props.dropdown_1}</a></li>
+                                    <li><a className="dropdown-item" href="/">{props.dropdown_2}</a></li>
+                                    <li><a className="dropdown-item" href="/">{props.dropdown_3}</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -45,5 +45,10 @@ Navbar.propTypes =
 };
 
 Navbar.defaultProps = {
-    title: 'set title here '
+    title: 'set title here ',
+    dropdown_head:"dropdown_head",
+    dropdown_1:"dropdown_1",
+    dropdown_2:"dropdown_2",
+    dropdown_3:"dropdown_3"
+
 };
